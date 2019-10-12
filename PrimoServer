@@ -7,6 +7,15 @@ package primoserver;
 
 import java.io.IOException;
 import java.net.ServerSocket;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package primoserver;
+
+import java.io.IOException;
+import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -32,7 +41,9 @@ public class PrimoServer {
             for (;;) {
                 Socket s;
                 s = ss.accept();
+                
                 int i =s.getInputStream().read();
+                
                 System.out.println("Il server ha ricevuto: " + i );
                 s.close();
             }
